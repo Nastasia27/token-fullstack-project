@@ -1,0 +1,44 @@
+@use "../sass-utils/variables";
+
+.btn {
+    display: inline-block;
+    padding: 0 1.5rem;
+    border-radius: 100px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border-color: transparent;
+    color: variables.$text-color;
+    text-transform: none;
+    text-align: center;
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-radius: inherit;
+        border: 1px solid variables.$primary-color;
+        opacity: 0;
+    }
+
+    &--dark {
+        background-color: variables.$bg-color;
+
+        &:after {
+            // border-color: variables.$primary-color;
+            opacity: 1;
+        }
+        
+    }
+}
