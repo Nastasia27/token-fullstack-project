@@ -1,3 +1,5 @@
+@use "../sass-utils/variables";
+
 .hero {
     height: 100vh;
     display: flex ;
@@ -5,7 +7,22 @@
     justify-content: center;
     align-items: center;
     animation: fadeIn 2s ease-in-out;
+    letter-spacing: 1px;
+}
 
+.hero__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    gap: variables.$spacing-sm;
+
+    @media screen and (max-width: variables.$breakpoint-sm) {
+        flex-direction: column;
+      }
     
-
+      @media screen and (max-width: variables.$breakpoint-md) {
+        flex-direction: column;
+      }
 }
