@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/logo.jpeg'
-import viteLogo from '/vite.svg'
 import "./styles/main.scss"
 import Button from './components/button.tsx'
 import Hero from './components/hero.tsx'

@@ -1,7 +1,6 @@
 @use "../sass-utils/variables";
 
 .btn {
-    display: inline-block;
     padding: 0 1.5rem;
     border-radius: 100px;
     font-size: 16px;
@@ -18,29 +17,36 @@
     align-items: center;
     height: 50px;
     width: 100%;
-    text-wrap: none;
     white-space: nowrap;
-    
-
-    &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        border-radius: inherit;
-        border: 1px solid variables.$primary-color;
-        opacity: 0;
-    }
+    overflow: hidden;
+    z-index: 1;
 
     &--dark {
         background-color: variables.$bg-color;
+        border-color: variables.$primary-color;
 
-        &:after {
-            // border-color: variables.$primary-color;
-            opacity: 1;
+        &:hover {
+            color: variables.$bg-color;
         }
-        
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: var(--y, 50%);
+            left: var(--x, 50%);
+            width: 190%;
+            aspect-ratio: 1/1;
+            background-color: variables.$primary-color;
+            border-radius: 100px;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+            transition: opacity 0.1s, width 0.6s, height 1s, transform 1s;
+            z-index: -1;
+        }
+
+        &:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }  
     }
 }
