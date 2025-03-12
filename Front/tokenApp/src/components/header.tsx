@@ -1,8 +1,9 @@
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import '../styles/components/_heder.scss'
 import Button from './button';
+import BurgerButton from './burgerButton';
 
 const NavLinks = [
     {
@@ -24,6 +25,11 @@ const NavLinks = [
 ]
 
 export default function Header() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(prev => !prev);
+    }
 
     useEffect(() => {
         const wrappers = document.querySelectorAll('.nav_link_wrapper');
@@ -67,23 +73,50 @@ export default function Header() {
             });
         })
     }, []);
+
+    useEffect(() => {
+        const burger = document.querySelector(".burger__nav");
+        if (isOpen) {
+            gsap.to(burger, {height: "calc(100vh - 9rem)", duration: 0.5})
+        } else {
+            gsap.to(burger, {height: 0, duration: 0.5})
+        }
+    }, [isOpen])
     
     return (
-        <header className="header">
-            <div className='header__back'></div>
-            <h1>KopiToken</h1>
-            <nav className='header__nav'>
-                {NavLinks.map((link, index) => (
-                    <div key={index} className='nav_link_wrapper'>
-                        <a href={link.link} className='nav_link_top'>
-                            {link.title}
-                        </a>
-                        <a href={link.link} className='nav_link_bottom'>{link.title}</a>
+        <header className="">
+            <div className='header'>
+                <div className='header_wrapper'>
+                    <div className='header__back'></div>
+                    <div className='logo'>KopiToken</div>
+                    <nav className='header__nav'>
+                        {NavLinks.map((link, index) => (
+                            <div key={index} className='nav_link_wrapper'>
+                                <a href={link.link} className='nav_link_top'>
+                                    {link.title}
+                                </a>
+                                <a href={link.link} className='nav_link_bottom'>{link.title}</a>
+                            </div>
+                        ))}
+                    </nav>
+                    <div className='button_talk'>
+                        <Button text="Let's talk" type='dark'/>
                     </div>
-                ))}
-            </nav>
-            <div>
-                <Button text="Let's talk" type='dark'/>
+                    <div className='button_menu'>
+                        <BurgerButton toggleMenu={toggleMenu} isOpen={isOpen}/>
+                    </div>
+                </div>
+                
+                <nav className={`burger__nav ${isOpen ? 'open' : ''}`}>
+                    {NavLinks.map((link, index) => (
+                        <div key={index} className=''>
+                            <a href={link.link} className=''>
+                                {link.title}
+                            </a>
+                        </div>
+                    ))}
+                </nav>
+                
             </div>
         </header>
     );

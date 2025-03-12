@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="hero">
             <div className='hero__content'>
                 {/* <h1>KopiToken</h1> */}
-                <h3>Tестовий токен у мережі</h3>
+                <h2>Tестовий токен у мережі</h2>
                 <h1 ref={ref}>{letters}</h1>
             </div>
         </div>
