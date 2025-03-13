@@ -1,6 +1,7 @@
 import '../styles/components/_hero.scss';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import RunningLine from './runningLine';
 
 
 
@@ -30,6 +31,7 @@ export default function Hero() {
                 {/* <h1>KopiToken</h1> */}
                 <h2>Tестовий токен у мережі</h2>
                 <h1 ref={ref}>{letters}</h1>
+                <RunningLine/>
             </div>
         </div>
     );

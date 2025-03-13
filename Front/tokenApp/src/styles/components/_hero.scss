@@ -1,29 +1,71 @@
 @use "../sass-utils/variables";
 
 .hero {
-    height: 100vh;
-    display: flex ;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    animation: fadeIn 2s ease-in-out;
-    letter-spacing: 1.2px;
+  height: calc(100vh - 2rem);
+  display: flex ;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  // animation: fadeIn 2s ease-in-out;
+  letter-spacing: 1.2px;
 }
 
 .hero__content {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    text-align: center;
-    gap: variables.$spacing-sm;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  gap: variables.$spacing-sm;
 
-    @media screen and (max-width: variables.$breakpoint-sm) {
-        flex-direction: column;
-      }
-    
-      @media screen and (max-width: variables.$breakpoint-md) {
-        flex-direction: column;
-      }
+  @media screen and (max-width: variables.$breakpoint-sm) {
+      flex-direction: column;
+    }
+  
+    @media screen and (max-width: variables.$breakpoint-md) {
+      flex-direction: column;
+    }
+}
+
+.running__line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: variables.$spacing-xxl;
+  background: variables.$primary-color;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    color: variables.$bg-color;
+    gap: 0;
+    white-space: nowrap;
+    width: max-content;
+  }
+
+  .running__item {
+    // margin-right: variables.$spacing-xl;
+    position: relative;
+    padding-right: 25px;
+    padding-left: 10px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      width: 2px;
+      height: 22px;
+      border-radius: 1px;
+      background: variables.$bg-color;
+      opacity: 0.3;
+      transform: translate3d(50%, -50%, 0);
+    }
+  }
 }
 
