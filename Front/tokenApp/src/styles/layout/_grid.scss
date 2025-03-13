@@ -4,8 +4,22 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto ;
-    grid-gap: 2.5rem;
-    
-    // width: min(100%, 1000px);
-    
+    // grid-gap: 2.5rem;
+    max-width: 1600px;
+    align-content: center;
+    margin: 0 auto;
+    padding: 0 variables.$spacing-xl;
 } 
+
+.block {
+    height: 100vh;
+    display: flex ;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+
+    &__content {
+        flex-direction: column;
+        gap: variables.$spacing-lg;
+    }
+}

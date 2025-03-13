@@ -3,6 +3,7 @@ import "./styles/main.scss"
 import Button from './components/button.tsx'
 import Hero from './components/hero.tsx'
 import Header from './components/header.tsx'
+import AboutBlock from './components/aboutBlock.tsx'
 import "./styles/main.scss"
 
 
@@ -22,20 +23,7 @@ function App() {
             </a> */}
           </div>
           <Hero/>
-          <div >
-            <p>
-              KopiToken – це експериментальний токен, створений для тестування та ознайомлення з блокчейн-технологіями. Він працює виключно у тестовій мережі Sepolia і не має реальної грошової вартості.
-            </p>
-            <p>
-              Цей токен дозволяє взаємодіяти зі смарт-контрактами, тестувати перекази, інтеграцію з гаманцями та інші можливості блокчейну Ethereum без ризику втрати коштів.
-            </p>
-            <p>
-              Увага: KopiToken не можна використовувати в основній мережі Ethereum, обмінювати на реальні активи або використовувати в комерційних цілях. Це виключно тестовий актив.
-            </p>
-            <p>
-              Якщо тобі потрібен токен для тестування, ти можеш отримати його безкоштовно, використовуючи відповідний смарт-контракт у мережі Sepolia.
-            </p>
-          </div>
+          <AboutBlock/>
           
           <div className="card">
             <button onClick={() => setCount((count) => count + 1)}>
