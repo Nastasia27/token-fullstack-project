@@ -1,14 +1,15 @@
-import { useRef } from 'react';
+import { ReactNode, ReactSVGElement, useRef } from 'react';
 import '../styles/components/_button.scss';
 import gsap from 'gsap';
 
 interface ButtonProps {
   text: string;
   type?: string;
+  icon?: React.ReactElement;
 }
 
 
-export default function Button({text, type = "primary"}: ButtonProps) {
+export default function Button({text, type = "primary", icon}: ButtonProps) {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -30,7 +31,8 @@ export default function Button({text, type = "primary"}: ButtonProps) {
       ref={buttonRef}
       onMouseMove={(e) => {handleMouseMove(e)}}
     >
-        {text}
+      {icon && <span>{icon}</span>}
+      <span>{text}</span>
     </button> 
   );
 }

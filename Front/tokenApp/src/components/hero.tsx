@@ -14,6 +14,7 @@ export default function Hero() {
         gsap.to(chars, {
             duration: 3,
             color: " rgb(160, 32, 240)",
+            textShadow: "1px 1px 0px rgba(173, 74, 235, 0.63)",
             repeat: -1,
             yoyo: true,
             stagger: 0.1
@@ -29,8 +30,9 @@ export default function Hero() {
         <div className="hero">
             <div className='hero__content'>
                 {/* <h1>KopiToken</h1> */}
-                <h2>Tестовий токен у мережі</h2>
+                <h2>Test token on the </h2>
                 <h1 ref={ref}>{letters}</h1>
+                <h2> network</h2>
                 <RunningLine/>
             </div>
         </div>
