@@ -12,14 +12,26 @@
 } 
 
 .block {
-    height: 100vh;
+    min-height: 100vh;
     display: flex ;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: start;
+    padding-top: variables.$spacing-xxl;
 
     &__content {
         flex-direction: column;
         gap: variables.$spacing-lg;
+        padding-top: variables.$spacing-lg;
+        padding-bottom: variables.$spacing-xxl;
+        // padding-inline: variables.$spacing-xxl;
+
+        @media screen and (max-width: variables.$breakpoint-sm) {
+            padding-inline: 0;
+          }
+        
+          @media screen and (max-width: variables.$breakpoint-md) {
+            padding-inline: 0;
+          }
     }
 }

@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import "./styles/main.scss"
-import Button from './components/button.tsx'
+import Footer from './components/footer.tsx'
 import Hero from './components/hero.tsx'
 import Header from './components/header.tsx'
 import AboutBlock from './components/aboutBlock.tsx'
@@ -24,19 +23,8 @@ function App() {
           </div>
           <Hero/>
           <AboutBlock/>
-          
-          <div className="card">
-            <button onClick={() => setCount((count) => count + 1)}>
-              count is {count}
-            </button>
-            <Button text='button' type='dark'/>
-            <p>
-              Edit <code>src/App.tsx</code> and save to test HMR
-            </p>
-          </div>
-          <p className="read-the-docs">
-            Click on the Vite and React logos to learn more
-          </p>
+          <Footer/>
+        
       </div>
     </>
   )

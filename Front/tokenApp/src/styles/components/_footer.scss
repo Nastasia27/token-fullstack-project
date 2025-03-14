@@ -1,0 +1,36 @@
+@use '../sass-utils/variables';
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-xl;
+    padding-block: variables.$spacing-xxl;
+
+    @media screen and (max-width: variables.$breakpoint-md) {
+        gap: variables.$spacing-md;
+        padding-block: variables.$spacing-lg;
+    }
+    
+    @media screen and (max-width: variables.$breakpoint-sm) {
+        gap: variables.$spacing-lg;
+        padding-block: variables.$spacing-xl;
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: variables.$spacing-xl;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: variables.$breakpoint-md) {
+            gap: variables.$spacing-sm;
+        }
+        
+        @media screen and (max-width: variables.$breakpoint-sm) {
+            gap: variables.$spacing-sm;
+        }
+    }
+}
+
+
+

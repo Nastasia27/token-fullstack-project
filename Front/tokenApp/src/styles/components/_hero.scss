@@ -12,19 +12,19 @@
 
 .hero__content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: start;
   align-items: center;
   text-align: center;
   gap: variables.$spacing-sm;
 
-  @media screen and (max-width: variables.$breakpoint-sm) {
-      flex-direction: column;
-    }
+  // @media screen and (max-width: variables.$breakpoint-sm) {
+  //     flex-direction: column;
+  //   }
   
-    @media screen and (max-width: variables.$breakpoint-md) {
-      flex-direction: column;
-    }
+  //   @media screen and (max-width: variables.$breakpoint-md) {
+  //     flex-direction: column;
+  //   }
 }
 
 .running__line {

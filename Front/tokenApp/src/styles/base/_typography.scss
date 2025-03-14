@@ -1,48 +1,53 @@
 @use "../sass-utils/variables";
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
   font-family: variables.$font-secondary;
   color: variables.$primary-color;
-
+  text-transform: capitalize;
+  text-shadow: 1px 1px 0px variables.$primary-color;
+  filter: drop-shadow(2px 5px 20px);
+  
   @media screen and (max-width: variables.$breakpoint-sm) {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
   }
 
   @media screen and (max-width: variables.$breakpoint-md) {
-    font-size: 1.75rem;
+    font-size: 2.5rem;
   }
 }
 
 h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.2;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 2;
+  text-transform: uppercase;
+  letter-spacing: 1.2;
 
   @media screen and (max-width: variables.$breakpoint-sm) {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   @media screen and (max-width: variables.$breakpoint-md) {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     line-height: 1.2;
 
     @media screen and (max-width: variables.$breakpoint-sm) {
-        font-size: 1.125rem;
+        font-size: 1rem;
     }
 
     @media screen and (max-width: variables.$breakpoint-md) {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 }
 
@@ -58,4 +63,10 @@ p {
     @media screen and (max-width: variables.$breakpoint-md) {
         font-size: 1.2rem;
     }
+}
+
+.mini_title {
+  font-weight: 100;
+  letter-spacing: 1.2;
+  text-transform: uppercase;
 }
