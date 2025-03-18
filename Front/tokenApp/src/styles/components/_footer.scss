@@ -32,5 +32,40 @@
     }
 }
 
+.social_link_block {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-sm;
+}
+
+.social_link_wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 1.2em;
+    width: 100%;
+}
+
+.social_link_top, 
+.social_link_bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: start;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.social_link_bottom {
+    transform: translateY(100%);
+    will-change: transform;
+}
+
+.social_link_char {
+    display: inline-block;
+}
+
 
 
