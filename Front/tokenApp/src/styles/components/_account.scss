@@ -1,0 +1,14 @@
+@use '../sass-utils//variables';
+
+.account_wrapper {
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // animation: fadeIn 2s ease-in-out;
+    letter-spacing: 1px;
+    font-size: 0.6rem;
+    gap: variables.$spacing-sm;
+
+  }
+

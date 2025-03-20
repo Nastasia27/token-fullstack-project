@@ -1,4 +1,4 @@
-
+@use "../sass-utils/variables";
 
 * {
     margin: 0;
@@ -14,7 +14,7 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #2C1E1E;
+    background-color: variables.$bg-color;
     color: #fff;
 }
 

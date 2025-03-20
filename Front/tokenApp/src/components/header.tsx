@@ -8,7 +8,7 @@ import BurgerButton from './burgerButton';
 const NavLinks = [
     {
         title: 'Home',
-        link: '#home'
+        link: '/'
     },
     {
         title: 'About',
@@ -20,7 +20,7 @@ const NavLinks = [
     },
     {
         title: 'Account',
-        link: '#'
+        link: '/account'
     },
 ]
 
