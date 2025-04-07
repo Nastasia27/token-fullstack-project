@@ -4,7 +4,6 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto ;
-    // grid-gap: 2.5rem;
     max-width: 1600px;
     align-content: center;
     margin: 0 auto;
@@ -19,13 +18,13 @@
     justify-content: center;
     align-items: start;
     padding-top: variables.$spacing-xxl;
+    gap: variables.$spacing-md;
 
     &__content {
         flex-direction: column;
         gap: variables.$spacing-lg;
         padding-top: variables.$spacing-lg;
         padding-bottom: variables.$spacing-xxl;
-        // padding-inline: variables.$spacing-xxl;
 
         @media screen and (max-width: variables.$breakpoint-sm) {
             padding-inline: 0;

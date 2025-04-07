@@ -15,6 +15,6 @@ export const wagmiConfig = createConfig({
   ],
   transports: {
     [mainnet.id]: http(),
-    [sepolia.id]: http(),
+    [sepolia.id]: http('https://sepolia.infura.io/v3/5051c611b54647ae98e825961fb306b5'),
   },
 })

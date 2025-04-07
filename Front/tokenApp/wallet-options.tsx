@@ -31,9 +31,7 @@ function WalletOption({
   }, [connector])
 
   return (
-    // <button disabled={!ready} onClick={onClick}>
-    //   {connector.name}
-    // </button>
+
     <Button text={connector.name} type='dark' onClick={onClick}/>
   )
 }

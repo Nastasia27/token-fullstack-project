@@ -11,8 +11,7 @@ function ConnectWallet() {
 export default function PageAccount() {
     return(
         <div className='grid'>
-            <div style={{paddingTop: '10rem'}}></div>
-            <div className="account_wrapper ">
+            <div className="block">
                 <ConnectWallet />
             </div>
         </div>
