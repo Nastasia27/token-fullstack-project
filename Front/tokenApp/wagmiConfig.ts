@@ -1,10 +1,20 @@
 import { http, createConfig } from 'wagmi'
 import { mainnet, sepolia } from 'wagmi/chains'
+import { injected, metaMask, safe, walletConnect } from 'wagmi/connectors'
+
+// const projectId = import.meta.env.VITE_WALLETCONNECT_PROJECT_ID
+const projectId = 'c552263e8e7f278997a94ca2c002f068'
 
 export const wagmiConfig = createConfig({
   chains: [mainnet, sepolia],
+  connectors: [
+    injected(),
+    walletConnect({ projectId }),
+    metaMask(),
+    safe(),
+  ],
   transports: {
     [mainnet.id]: http(),
-    [sepolia.id]: http(),
+    [sepolia.id]: http('https://sepolia.infura.io/v3/5051c611b54647ae98e825961fb306b5'),
   },
 })

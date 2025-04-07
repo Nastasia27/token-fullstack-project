@@ -10,7 +10,7 @@ const kopiTokenTexts = [
 
 export default function AboutBlock () {
     return (
-        <div className="block">
+        <div className="block" id="about">
             <h3 className="mini_title">/ about</h3>
             <div className="block block__content">
                 {kopiTokenTexts.map((text, index) => (

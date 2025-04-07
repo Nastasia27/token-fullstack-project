@@ -7,6 +7,10 @@ import {ERC20Pausable} from "@openzeppelin/contracts/token/ERC20/extensions/ERC2
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
 contract KopiToken is ERC20, ERC20Pausable, Ownable {
+    uint256 public claimAmount = 50 * 10 ** decimals();
+    mapping(address => bool) private hasClaimed;
+
+
     constructor(address initialOwner, address recipient)
         ERC20("KopiToken", "KOPI")
         Ownable(initialOwner)
@@ -33,5 +37,15 @@ contract KopiToken is ERC20, ERC20Pausable, Ownable {
         override(ERC20, ERC20Pausable)
     {
         super._update(from, to, value);
+    }
+
+    function claimTokens() external {
+        require(!hasClaimed[msg.sender], "Already claimed");
+        require(
+            balanceOf(owner()) >= claimAmount,
+            "Insufficient amount of tokens to claim"
+        );
+        hasClaimed[msg.sender] = true;
+        _transfer(owner(), msg.sender, claimAmount);
     }
 }

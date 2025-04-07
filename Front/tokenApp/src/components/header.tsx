@@ -8,19 +8,19 @@ import BurgerButton from './burgerButton';
 const NavLinks = [
     {
         title: 'Home',
-        link: '#'
+        link: '/'
     },
     {
         title: 'About',
-        link: '#'
+        link: '#about'
     },
     {
         title: 'Contact',
-        link: '#'
+        link: '#contacts'
     },
     {
         title: 'Account',
-        link: '#'
+        link: '/account'
     },
 ]
 
@@ -110,7 +110,7 @@ export default function Header() {
                 <nav className={`burger__nav ${isOpen ? 'open' : ''}`}>
                     {NavLinks.map((link, index) => (
                         <div key={index} className=''>
-                            <a href={link.link} className=''>
+                            <a href={link.link} className='' onClick={toggleMenu}>
                                 {link.title}
                             </a>
                         </div>

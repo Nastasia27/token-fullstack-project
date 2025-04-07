@@ -1,32 +1,30 @@
-import { useState } from 'react'
-import Footer from './components/footer.tsx'
-import Hero from './components/hero.tsx'
-import Header from './components/header.tsx'
-import AboutBlock from './components/aboutBlock.tsx'
+
+import Home from './components/Home.tsx'
+import PageAccount from './components/PageAccount.tsx'
 import "./styles/main.scss"
+import { BrowserRouter, Route, Routes } from "react-router";
+import Layout from './components/Layout.tsx'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div className='grid'>
+    <BrowserRouter>
+
+      <Routes>
+        <Route path='/' element={<Layout/>}>
+          <Route index element={<Home/>}/>
+          <Route path='/account' element={<PageAccount/>}/>
+        </Route>
+      {/* <div className='grid'>
         <Header/>
-        <div >
-            {/* <a href="https://vite.dev" target="_blank">
-              <img src={viteLogo} className="logo" alt="Vite logo" />
-            </a>
-            <a href="https://react.dev" target="_blank">
-              <img src={reactLogo}  alt="React logo" />
-            </a> */}
-          </div>
-          <Hero/>
-          <AboutBlock/>
-          <Footer/>
+        <Hero/>
+        <AboutBlock/>
+        <Footer/>
         
-      </div>
-    </>
+      </div> */}
+      </Routes>
+    </BrowserRouter>
   )
 }
 

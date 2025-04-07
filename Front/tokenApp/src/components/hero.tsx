@@ -27,7 +27,7 @@ export default function Hero() {
     ));
 
     return (
-        <div className="hero">
+        <div className="hero" id='home'>
             <div className='hero__content'>
                 {/* <h1>KopiToken</h1> */}
                 <h2>Test token on the </h2>

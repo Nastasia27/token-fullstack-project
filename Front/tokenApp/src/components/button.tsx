@@ -1,4 +1,4 @@
-import { ReactNode, ReactSVGElement, useRef } from 'react';
+import {  useRef } from 'react';
 import '../styles/components/_button.scss';
 import gsap from 'gsap';
 
@@ -6,10 +6,11 @@ interface ButtonProps {
   text: string;
   type?: string;
   icon?: React.ReactElement;
+  onClick?: (event: React.MouseEvent) => void;
 }
 
 
-export default function Button({text, type = "primary", icon}: ButtonProps) {
+export default function Button({text, type = "primary", icon, onClick}: ButtonProps) {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -30,6 +31,7 @@ export default function Button({text, type = "primary", icon}: ButtonProps) {
       className={`btn btn--${type}`}
       ref={buttonRef}
       onMouseMove={(e) => {handleMouseMove(e)}}
+      onClick={onClick}
     >
       {icon && <span>{icon}</span>}
       <span>{text}</span>
