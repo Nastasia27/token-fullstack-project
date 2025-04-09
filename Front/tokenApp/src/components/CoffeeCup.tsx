@@ -1,10 +1,9 @@
 
-import { Canvas, useLoader } from '@react-three/fiber';
 import { useGLTF } from '@react-three/drei';
-import { OrbitControls, Environment } from '@react-three/drei';
+import { useLoader } from '@react-three/fiber';
 import * as THREE from 'three';
 import gsap from 'gsap';
-import React, { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import type { JSX } from 'react';
 
 interface CoffeeCupProps {

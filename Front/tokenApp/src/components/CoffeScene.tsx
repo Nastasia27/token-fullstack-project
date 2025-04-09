@@ -6,8 +6,6 @@ import { useState } from 'react';
 import Button from "./button";
 
 export default function CoffeeScene() {
-    const [drinkCoffeeFn, setDrinkCoffeeFn] = useState<(() => void) | undefined>(); 
-    const [getPredictionFn, setGetPredictionFn] = useState<(() => void) | undefined>(); 
     const [prediction, setPrediction] = useState<string>('');
     const [step, setStep] = useState<number>(0);
 
