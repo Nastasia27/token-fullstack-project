@@ -30,6 +30,10 @@ function WalletOption({
     })()
   }, [connector])
 
+  if (!ready) {
+    return null
+  }
+  
   return (
 
     <Button text={connector.name} type='dark' onClick={onClick}/>
