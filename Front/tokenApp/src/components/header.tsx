@@ -22,6 +22,10 @@ const NavLinks = [
         title: 'Account',
         link: '/account'
     },
+    {
+        title: 'Get Token',
+        link: '/get-token'
+    },
 ]
 
 export default function Header() {
