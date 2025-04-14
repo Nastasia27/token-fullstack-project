@@ -1,0 +1,11 @@
+Model Information:
+* title:	Magic_fire_fx_02
+* source:	https://sketchfab.com/3d-models/magic-fire-fx-02-82692234c49e4310a593ca9d44335c27
+* author:	prototypus (https://sketchfab.com/prototypus)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Magic_fire_fx_02" (https://sketchfab.com/3d-models/magic-fire-fx-02-82692234c49e4310a593ca9d44335c27) by prototypus (https://sketchfab.com/prototypus) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

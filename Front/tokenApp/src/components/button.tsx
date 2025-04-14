@@ -7,10 +7,11 @@ interface ButtonProps {
   type?: string;
   icon?: React.ReactElement;
   onClick?: (event: React.MouseEvent) => void;
+  disabled?: boolean;
 }
 
 
-export default function Button({text, type = "primary", icon, onClick}: ButtonProps) {
+export default function Button({text, type = "primary", icon, onClick, disabled}: ButtonProps) {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -32,6 +33,7 @@ export default function Button({text, type = "primary", icon, onClick}: ButtonPr
       ref={buttonRef}
       onMouseMove={(e) => {handleMouseMove(e)}}
       onClick={onClick}
+      disabled={disabled}
     >
       {icon && <span>{icon}</span>}
       <span>{text}</span>
