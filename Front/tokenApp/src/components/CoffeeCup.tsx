@@ -293,7 +293,6 @@ export default function CoffeeCup({ step, ...props }: CoffeeCupProps) {
                     metalness={2}
                 />
             </mesh>
-
             {isGroundsGenerated}
         </group>
     </>

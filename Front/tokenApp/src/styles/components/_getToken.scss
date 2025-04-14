@@ -1,3 +1,5 @@
+@use "../sass-utils/variables";
+
 .wrapper {
     background-color: rgb(20, 20, 20); /* $bg-color */
     height: 100vh;
@@ -40,52 +42,31 @@
     color: rgb(20, 20, 20);
   }
 
-  
-  
+  .pulse_animation {
+    animation: pulse 3s infinite;
 
-.result {
-    margin-top: 30px;
-    text-align: center;
-    animation: fadeIn 1s ease-in-out;
   }
-  
+
   .prediction {
-    font-size: 20px;
-    margin-bottom: 10px;
     color: rgb(0, 255, 255);
     font-style: italic;
+    text-shadow: 0 0 45px rgb(0, 255, 255), 0 0 40px rgb(0, 255, 255), 0 0 25px rgb(0, 255, 255);
   }
   
-  .token {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: rgb(160, 32, 240);
-  }
-  
-  .claimButton {
-    background-color: rgb(0, 255, 255);
-    color: rgb(20, 20, 20);
-    padding: 10px 20px;
-    font-weight: bold;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.3s;
-  }
-  
-  .claimButton:hover {
-    transform: scale(1.05);
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
+ @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.8;
     }
-  
-    to {
-      opacity: 1;
-      transform: translateY(0);
+    50% {
+      transform: scale(1.05);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1; 
     }
   }
+  
+
   

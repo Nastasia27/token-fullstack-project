@@ -4,10 +4,16 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import { useState } from 'react';
 import Button from "./button";
+import PredictionText from "./Predictiontext";
+import Modal from "./modal";
+
 
 export default function CoffeeScene() {
     const [prediction, setPrediction] = useState<string>('');
     const [step, setStep] = useState<number>(0);
+    const [showPrediction, setShowPrediction] = useState<boolean>(false);
+    const [isButtonDisabled, setIsButtonDisabled] = useState<boolean>(false);
+    const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
 
     let displayText = '';
     let buttonText = '';
@@ -19,7 +25,6 @@ export default function CoffeeScene() {
         displayText = 'Check the prediction';
         buttonText = 'Check the prediction';
       } else if (step === 2) {
-        displayText = prediction;
         buttonText = 'Get Tokens';
       }
 
@@ -42,12 +47,22 @@ export default function CoffeeScene() {
     const handleClick = () => {
         if (step === 0 ) {
             setStep(1);
+            setIsButtonDisabled(true);
+            setTimeout(() => {
+                setIsButtonDisabled(false);
+            }, 6000);
         } else if (step === 1) {
             const randomPrediction = geteratePredictions();
             setPrediction(randomPrediction);
             setStep(2);
+            setShowPrediction(false);
+            setIsButtonDisabled(true);
+            setTimeout(() => {
+                setIsButtonDisabled(false);
+                setShowPrediction(true);
+            }, 4000);
         } else if (step === 2) {
-            setStep(0);
+            setIsOpenModal(true);
         }
     }
 
@@ -73,11 +88,20 @@ export default function CoffeeScene() {
                 <Environment preset="sunset" />
             </Canvas>
             <div className="text_wrapper">
+                {step === 2 && !showPrediction &&  (
+                    <p className="pulse_animation">Analyzing...</p>
+                )}
+                {step === 2 &&  showPrediction && (
+                    <PredictionText prediction={prediction} />
+                )}
                 <p style={{whiteSpace: 'wrap'}}>{displayText}</p>
                 <div className="button_wrapper">
-                    <Button text={buttonText} type="dark" onClick={handleClick}></Button>
+                    <Button text={buttonText} type="dark" onClick={handleClick} disabled={isButtonDisabled}></Button>
                 </div>
             </div>
+            {isOpenModal && (
+                <Modal onClose={() => setIsOpenModal(false)} />
+            )}
         </div>
     )
 }
