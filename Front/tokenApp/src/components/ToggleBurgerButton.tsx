@@ -6,7 +6,7 @@ interface BurgerButtonProps {
   toggleMenu: () => void;
 }
 
-export default function BurgerButton({isOpen, toggleMenu}: BurgerButtonProps) {
+export default function ToggleBurgerButton({isOpen, toggleMenu}: BurgerButtonProps) {
 
   return (
     <button

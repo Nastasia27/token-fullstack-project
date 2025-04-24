@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import '../styles/components/_heder.scss'
 import Button from './Button';
-import BurgerButton from './BurgerButton';
+import BurgerButton from './ToggleBurgerButton';
 
 const NavLinks = [
     {

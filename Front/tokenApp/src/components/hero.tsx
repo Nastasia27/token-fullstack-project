@@ -1,7 +1,7 @@
 import '../styles/components/_hero.scss';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import RunningLine from './RunningLine';
+import RunningLine from './RunningLineBlock.tsx';
 import VirtualCoinScene from './VirtualCoinScene';
 
 

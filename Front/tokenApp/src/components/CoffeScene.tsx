@@ -5,7 +5,7 @@ import { OrbitControls, Environment } from '@react-three/drei';
 import { useState } from 'react';
 import Button from "./Button";
 import PredictionText from "./Predictiontext";
-import Modal from "./Modal";
+import Modal from "./ClaimTokenModal";
 import { useEffect } from "react";
 
 

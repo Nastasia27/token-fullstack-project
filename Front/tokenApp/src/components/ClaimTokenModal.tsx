@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { isAddress } from 'ethers';
 
 
-export default function Modal({ onClose }: { onClose: () => void }) {
+export default function ClaimTokenModal({ onClose }: { onClose: () => void }) {
     const [addressFromClient, setAddressFromClient] = useState<string>('');
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [txHash, setTxHash] = useState<string | null>(null);
