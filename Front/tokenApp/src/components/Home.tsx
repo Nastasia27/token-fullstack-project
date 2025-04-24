@@ -1,7 +1,7 @@
 
-import Hero from "./Hero"
-import AboutBlock from "./AboutBlock"
-import Footer from "./Footer"
+import Hero from "./HeroBlock"
+import AboutBlock from "./About"
+import Footer from "./FooterBlock"
 
 export default function Home() {
     return(

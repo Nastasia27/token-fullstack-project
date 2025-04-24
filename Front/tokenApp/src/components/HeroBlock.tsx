@@ -2,11 +2,11 @@ import '../styles/components/_hero.scss';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import RunningLine from './RunningLineBlock.tsx';
-import VirtualCoinScene from './VirtualCoinScene';
+import VirtualCoinScene from './VirtualCoinScene.tsx';
 
 
 
-export default function Hero() {
+export default function HeroBlock() {
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {

@@ -3,7 +3,7 @@ import CoffeeCup from "./CoffeeCup";
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import { useState } from 'react';
-import Button from "./Button";
+import Button from "./MainButton";
 import PredictionText from "./Predictiontext";
 import Modal from "./ClaimTokenModal";
 import { useEffect } from "react";

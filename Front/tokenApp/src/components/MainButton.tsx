@@ -11,7 +11,7 @@ interface ButtonProps {
 }
 
 
-export default function Button({text, type = "primary", icon, onClick, disabled}: ButtonProps) {
+export default function MainButton({text, type = "primary", icon, onClick, disabled}: ButtonProps) {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
