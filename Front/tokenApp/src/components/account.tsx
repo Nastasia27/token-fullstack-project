@@ -1,5 +1,5 @@
 import { useAccount, useDisconnect, useEnsName, useBalance } from 'wagmi'
-import Button from './button'
+import Button from './Button'
 
 export function Account() {
   const { address } = useAccount()

@@ -1,8 +1,8 @@
 import '../styles/components/_hero.scss';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import RunningLine from './runningLine';
-import CoinScene from './coinScene';
+import RunningLine from './RunningLine';
+import VirtualCoinScene from './VirtualCoinScene';
 
 
 
@@ -35,7 +35,7 @@ export default function Hero() {
                 <h1 ref={ref}>{letters}</h1>
                 <h2> network</h2>
                 <div>
-                    <CoinScene/>
+                    <VirtualCoinScene/>
                 </div>
                 <RunningLine/>
             </div>

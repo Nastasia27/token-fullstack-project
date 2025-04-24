@@ -299,7 +299,6 @@ export default function CoffeeCup({ step, ...props }: CoffeeCupProps) {
   )
 }
 
-useGLTF.preload('/modules/scene.gltf')
 
 
 

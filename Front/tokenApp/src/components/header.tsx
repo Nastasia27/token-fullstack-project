@@ -2,8 +2,8 @@
 import { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import '../styles/components/_heder.scss'
-import Button from './button';
-import BurgerButton from './burgerButton';
+import Button from './Button';
+import BurgerButton from './BurgerButton';
 
 const NavLinks = [
     {

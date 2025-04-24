@@ -1,4 +1,4 @@
-import { Account } from "./account"
+import { Account } from "./Account"
 import {WalletOptions} from "../../wallet-options"
 import { useAccount } from 'wagmi';
 

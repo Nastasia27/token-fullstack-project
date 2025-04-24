@@ -2,10 +2,10 @@
 import CoffeeCup from "./CoffeeCup";
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
-import { use, useState } from 'react';
-import Button from "./button";
+import { useState } from 'react';
+import Button from "./Button";
 import PredictionText from "./Predictiontext";
-import Modal from "./modal";
+import Modal from "./Modal";
 import { useEffect } from "react";
 
 

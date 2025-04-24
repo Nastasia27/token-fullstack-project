@@ -22,13 +22,13 @@ function Coin() {
       {/* Тіло монети */}
       <mesh rotation={[Math.PI / 2, 0, 0]} scale={1}>
         <cylinderGeometry args={[1.5, 1.5, 0.1, 64]} />
-        <meshStandardMaterial metalness={1} roughness={0.2} color="rgba(0, 255, 255, 0.7)" />
+        <meshStandardMaterial metalness={1} roughness={0.2} color="rgb(0, 255, 255)" />
       </mesh>
 
       {/* Борт монети */}
       <mesh position={[0, 0.055, 0]} rotation={[-Math.PI / 1, 0, 0]}>
         <torusGeometry args={[1.5, 0.15, 18, 10]} />
-        <meshStandardMaterial metalness={1} roughness={0.2} color="rgba(0, 255, 255, 0.7)" />
+        <meshStandardMaterial metalness={1} roughness={0.2} color="rgb(0, 255, 255)" />
       </mesh>
 
       {/* Гравірування */}
@@ -41,7 +41,6 @@ function Coin() {
         depthOffset={-1}
       >
         KOPI
-        <meshStandardMaterial metalness={1} roughness={0.2} color="rgba(0, 255, 255, 0.7)" />
       </Text>
       <Text
         position={[0, 0.05, 0.055]}
@@ -57,7 +56,7 @@ function Coin() {
   );
 }
 
-export default function CoinScene() {
+export default function VirtualCoinScene() {
     return (
       <Canvas camera={{ position: [0, 0, 5], fov: 50 }} style={{ height: '100px', width: '100px' }}>
         <Suspense fallback={null}>

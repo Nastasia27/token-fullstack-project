@@ -1,4 +1,4 @@
-import Button from "./button"
+import Button from "./Button"
 // import Tg from "../../public/svg/telegram.svg"
 import Tg from "../svg/telegram.svg"
 import email from "../svg/email.svg"
