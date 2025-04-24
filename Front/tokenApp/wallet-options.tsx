@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Connector, useConnect } from 'wagmi'
-import Button from './src/components/button'
+import Button from './src/components/MainButton'
 
 export function WalletOptions() {
   const { connectors, connect } = useConnect()

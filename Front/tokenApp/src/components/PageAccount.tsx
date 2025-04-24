@@ -1,10 +1,10 @@
-import { Account } from "./account"
+import { AccountBlock } from "./AccountBlock"
 import {WalletOptions} from "../../wallet-options"
 import { useAccount } from 'wagmi';
 
 function ConnectWallet() {
     const { isConnected } = useAccount()
-    if (isConnected) return <Account />
+    if (isConnected) return <AccountBlock />
     return <WalletOptions />
   }
 

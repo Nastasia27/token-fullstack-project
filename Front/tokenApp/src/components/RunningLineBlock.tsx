@@ -8,7 +8,7 @@ const runningList = [
     'Kopi Token'
 ]
 
-export default function RunningLine() {
+export default function RunningLineBlock() {
     const lineRef = useRef<HTMLUListElement>(null);
 
     useEffect(() => {

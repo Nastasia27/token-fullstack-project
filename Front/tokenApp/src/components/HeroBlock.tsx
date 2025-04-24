@@ -1,11 +1,12 @@
 import '../styles/components/_hero.scss';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import RunningLine from './runningLine';
+import RunningLine from './RunningLineBlock.tsx';
+import VirtualCoinScene from './VirtualCoinScene.tsx';
 
 
 
-export default function Hero() {
+export default function HeroBlock() {
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -33,6 +34,9 @@ export default function Hero() {
                 <h2>Test token on the </h2>
                 <h1 ref={ref}>{letters}</h1>
                 <h2> network</h2>
+                <div>
+                    <VirtualCoinScene/>
+                </div>
                 <RunningLine/>
             </div>
         </div>

@@ -205,13 +205,13 @@ export default function CoffeeCup({ step, ...props }: CoffeeCupProps) {
   const handleShowGrounds = () => {
     console.log('handleShowGrounds coffee function called');
     if (!groupRef.current) return;
-
+    console.log('handleShowGrounds first');
     gsap.to(groupRef.current.rotation, {
-        y:-10,
+        y:-12.5,
         duration: 3,
         ease: 'power2.inOut',
     });
-
+    console.log('handleShowGrounds second');
     gsap.to(groupRef.current.rotation, {
         x:1.5,
         duration: 3,
@@ -299,7 +299,6 @@ export default function CoffeeCup({ step, ...props }: CoffeeCupProps) {
   )
 }
 
-useGLTF.preload('/modules/scene.gltf')
 
 
 

@@ -8,7 +8,7 @@ const kopiTokenTexts = [
     "If you need the token for testing, you can obtain it for free using the corresponding smart contract on the Sepolia network."
   ];
 
-export default function AboutBlock () {
+export default function About () {
     return (
         <div className="block" id="about">
             <h3 className="mini_title">/ about</h3>

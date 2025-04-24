@@ -1,7 +1,7 @@
 import { useAccount, useDisconnect, useEnsName, useBalance } from 'wagmi'
-import Button from './button'
+import Button from './MainButton'
 
-export function Account() {
+export function AccountBlock() {
   const { address } = useAccount()
   const { disconnect } = useDisconnect()
   const { data: ensName } = useEnsName({ address })

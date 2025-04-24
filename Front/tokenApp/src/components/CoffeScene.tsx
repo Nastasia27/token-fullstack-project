@@ -3,9 +3,10 @@ import CoffeeCup from "./CoffeeCup";
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import { useState } from 'react';
-import Button from "./button";
+import Button from "./MainButton";
 import PredictionText from "./Predictiontext";
-import Modal from "./modal";
+import Modal from "./ClaimTokenModal";
+import { useEffect } from "react";
 
 
 export default function CoffeeScene() {
@@ -65,6 +66,13 @@ export default function CoffeeScene() {
             setIsOpenModal(true);
         }
     }
+
+    useEffect(() => {
+        setIsButtonDisabled(true);
+            setTimeout(() => {
+                setIsButtonDisabled(false);
+            }, 4000);
+    }, []);
 
     return (
         <div id="canvas-container">
