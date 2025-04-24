@@ -2,6 +2,7 @@ import '../styles/components/_hero.scss';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import RunningLine from './runningLine';
+import CoinScene from './coinScene';
 
 
 
@@ -33,6 +34,9 @@ export default function Hero() {
                 <h2>Test token on the </h2>
                 <h1 ref={ref}>{letters}</h1>
                 <h2> network</h2>
+                <div>
+                    <CoinScene/>
+                </div>
                 <RunningLine/>
             </div>
         </div>
