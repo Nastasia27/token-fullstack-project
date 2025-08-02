@@ -21,4 +21,4 @@ Users can connect their wallet, view token details, and claim test tokens via th
 ---
 
 ## 🌐 Live Demo
-👉 [Live Website]([https://token-flax.vercel.app/])
+👉 [Live Website](https://token-flax.vercel.app/)
